@@ -51,12 +51,17 @@ test.describe("Final Page Tests", () => {
         expect(isImageVisible).toBe(true);
     });
 
-    test("validate the Back Home button functionality", async ({ page }) => {
+    test("validate the Back Home button functionality 1", async ({ page }) => {
         const finalPage = new FinalPage(page);
         await finalPage.clickBackHomeButton();
         await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
     });
 
+     test("validate the Back Home button functionality 2", async ({ page }) => {
+        const finalPage = new FinalPage(page);
+        await finalPage.clickBackHomeButton();
+        await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+    });
 
 
 
