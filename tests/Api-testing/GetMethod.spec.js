@@ -87,11 +87,8 @@ test("Api Testing with GET method 8", async ({ request }) => {
 test.only("Api Testing with Ui Verification", async ({ request }) => {
 
     const response = await request.get("https://api.demoblaze.com/entries");
-
     expect(response.status()).toBe(200);
-
     const responseJson = await response.json();
-
     console.log(responseJson.Items[2].title);
 
 });
